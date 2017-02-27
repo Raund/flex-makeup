@@ -1,0 +1,24 @@
+{
+  "name": "flex",
+  "description": "Our site",
+  "main": "index.js",
+  "authors": [
+    "Raund"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize.css": "*",
+    "jquery": "2.*"
+  },
+  "devDependencies": {
+    "bourbon": "^4.3.3"
+  }
+}
