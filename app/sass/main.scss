@@ -9,7 +9,6 @@
   padding: 0;
 }
 a{
-  color: #fff;
   text-decoration: none;
 }
 a:hover{
@@ -20,8 +19,14 @@ ul{
   margin: 0;
   list-style: none;
 }
+.right{
+  float: right;
+}
 .left{
   float: left;
+}
+.center{
+  text-align: center;
 }
 .hidden {
   display: none;
@@ -36,14 +41,321 @@ body{
   width: 100%;
   margin: 0 auto;
   background-color: #ffffff;
-  color: #383838;
-  font-family: "Magistral", sans-serif;
-  font-size: 16px;
+  color: #6d6e71;
+  font-family: "OpenSansRegular", $helvetica;
+  font-size: em(17px);
+  line-height: em(24px);
 }
-.wrapper{
-  width: 1200px;
+/*---------------------header------------------------*/
+.header{
+  position: relative;
+  padding: 15px 30px;
+  background-color: #fff;
+  z-index:5;
+}
+.lang,
+.contact{
+  width: 100%;
   margin: 0 auto;
 }
+.lang_item-wrap,
+.contact_item-wrap{
+  float: left;
+  width: 33.333%;
+  border-left: 1px solid #bcbec3;
+  line-height: 30px;
+  text-align: center;
+}
+.contact_item-wrap {
+  line-height: 25px;
+}
+.lang_item-wrap:first-child,
+.contact_item-wrap:first-child{
+  border-left:none;
+}
+.fa:hover,
+.fa.active{
+  color: #ee515f;
+  cursor: pointer;
+}
+.lang_item{
+  padding: 0 10px;
+  color: #47667e;
+  font-family: "OpenSansBold", $helvetica;
+  font-size: em(22px);
+  text-transform: uppercase;
+}
+.lang_item:hover,
+.lang_item.active {
+  color: #ffffff;
+  background-color: $hover-color;
+  cursor: pointer;
+}
+.contact-show{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 15px 0 20px 0;
+  padding-top: 10px;
+  border: 2px solid #d4d4d5;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "OpenSansLight", $helvetica;
+  font-size: em(15px);
+  font-weight: bold;
+}
+.arrow-bottom{
+  display: none;
+  position: absolute;
+  bottom: -12px;
+  width: 33px;
+  height: 12px;
+  background: url("../img/arrow_bottom.png") center no-repeat;
+}
+.phone,
+.map,
+.mail{
+  display: none;
+  font-size: 20px;
+}
+.phone.active .arrow-bottom{
+  display: block;
+  left: 10%;
+}
+.map.active .arrow-bottom{
+  display: block;
+  left: 43%;
+}
+.mail.active .arrow-bottom{
+  display: block;
+  left: 75%;
+}
+.phone.active,
+.map.active,
+.mail.active{
+  display: block;
+}
+.logo-wrap{
+  margin: 20px 0 40px 0;
+}
+.logo-text-wrap{
+  display: inline-block;
+  margin-left: 15px;
+  text-align: center;
+}
+.logo-name{
+  color: #d4d4d5;
+  font-family: "OpenSansBold", $helvetica;
+  font-size: em(56px);
+  line-height: 40px;
+  text-transform: uppercase;
+}
+.logo-name_first{
+  color: $hover-color;
+}
+.logo-description{
+  letter-spacing: 3.8px;
+  color: #6d6e71;
+}
+.nav_item{
+  margin-right: 25px;
+  color: #6d6e71;
+  font-family: "OpenSansRegular", $helvetica;
+  font-size: em(22px);
+  text-transform: uppercase;
+}
+.nav_item:last-child {
+  margin-right: 0;
+}
+.nav_item:hover,
+.nav_item.active{
+  color: $hover-color;
+  font-family: "OpenSansBold", $helvetica;
+  text-decoration: underline;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.button-menu{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+  padding-top: 12px;
+  background-color: #47667e;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 10;
+  transition: all 0.8s ease;
+}
+.button-menu.active{
+  top: 197px;
+  transition: all 0.8s ease;
+}
+.close.icon:after {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 21px;
+  height: 2px;
+  background-color: currentColor;
+  transform: rotate(45deg);
+}
+
+.close.icon:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  width: 21px;
+  height: 2px;
+  background-color: currentColor;
+  transform: rotate(-45deg);
+}
+
+.close.icon {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  margin-top: 2px;
+  margin-left: -70px;
+  width: 21px;
+  height: 21px;
+}
+
+.menu.icon:after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 17px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.menu.icon:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 0;
+  width: 17px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.menu.icon {
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  margin-left: -55px;
+  margin-top: 12px;
+  width: 17px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.icon,
+.icon:before,
+.icon:after {
+  transition: all 0.8s ease;
+}
+/*-------------------END header----------------------*/
+/*-------------------Slider section----------------------*/
+.section-slider{
+  padding: 65px;
+  position: relative;
+  z-index: 1;
+}
+.section-slider_bg{
+  min-height: 875px;
+  margin-top: -875px;
+  background: #47667e url("../img/slider-bg.png") center;
+  transform: skewY(-5deg);
+}
+.slide_img-wrap{
+  padding-left: 40px;
+}
+.slide-img{
+  max-width: 100%;
+}
+.slide_description-wrap{
+  color: #ffffff;
+  padding-top: 40px;
+  padding-right: 40px;
+}
+.slide-name{
+  padding-bottom: 35px;
+  font-family: "OpenSansBold", $helvetica;
+  font-size: em(85px);
+  line-height: 65px;
+}
+.slide_main-description{
+  margin-bottom: 35px;
+  font-family: "OpenSansLight", $helvetica;
+  font-size: em(27px);
+}
+.slide_description{
+  margin-bottom: 80px;
+  font-family: "OpenSansLight", $helvetica;
+  font-size: em(17px);
+}
+.order{
+  width: 180px;
+  height: 50px;
+  border: 2px solid #fff;
+  background-color: inherit;
+  color: #ffffff;
+  font-family:"OpenSansRegular", $helvetica;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+.order:hover{
+  background-color: $hover-color;
+  cursor: pointer;
+  font-weight: bold;
+}
+/*-------------------END Slider section----------------------*/
+/*-------------------Owl-carousel----------------------*/
+.owl-carousel .owl-wrapper-outer{
+  z-index: 1;
+}
+.owl-theme .owl-controls .owl-page span{
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  background-color: #fff;
+  opacity: 1;
+}
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls .owl-page span:hover {
+  background-color: $hover-color;
+}
+.owl-pagination{
+  margin-top: 70px;
+  text-align: left;
+  margin-left: 20%;
+}
+.owl-theme .owl-controls .owl-buttons div{
+  position: absolute;
+  bottom: 48%;
+  padding: 0;
+  background: inherit;
+  opacity: 1;
+  font-size: 100px;
+  z-index: 2;
+}
+.owl-prev{
+  left: -2%;
+}
+.owl-next{
+  right: -2%;
+}
+.owl-theme .owl-controls .owl-buttons div .fa:hover{
+  color: $hover-color;
+}
+/*-------------------END Owl-carousel----------------------*/
 
 //ALWAYS END
 @import "media.scss";
