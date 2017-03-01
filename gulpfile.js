@@ -75,13 +75,13 @@ gulp.task('clear', function (callback) {
 });
 
 gulp.task('sprite', function () {
-  var spriteData = gulp.src('app/img/@3x/*.png').pipe(spritesmith({
+  var spriteData = gulp.src('app/img/imgForSprite/origin/*.png').pipe(spritesmith({
     imgName: 'sprite.png',
     cssName: 'sprite.css',
-    padding: 400,
+    padding: 50,
     algorithm: 'top-down',
   }));
-  return spriteData.pipe(gulp.dest('app/img/sprites/@3x/'));
+  return spriteData.pipe(gulp.dest('app/img/sprites/'));
 });
 
 gulp.task('default', ['watch']);
