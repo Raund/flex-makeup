@@ -13,6 +13,12 @@
   .slide_description{
     margin-bottom: 45px;
   }
+  .services_item__description{
+    padding: 0 10%;
+  }
+  .section_services{
+    margin-top: 0;
+  }
 }
 
 /* Medium Devices, Desktops */
@@ -55,6 +61,9 @@
   .owl-pagination{
     margin-left: 0;
     text-align: center;
+  }
+  .section_description{
+    line-height:em(20px);
   }
 }
 
@@ -119,6 +128,15 @@
   .slide_description{
     padding: 0 30px;
     font-size: em(14px);
+  }
+  .soc{
+    margin-bottom: 25px;
+  }
+  .all-services_wrap{
+    margin-bottom: 0;
+  }
+  .section_description{
+    font-size: em(21px);
   }
 }
 
@@ -195,8 +213,15 @@ animation: none !important
   .owl-next {
     right: -3%;
   }
-
-
+  .section_title{
+    font-size: em(30px);
+    padding-left: 0;
+    background-image: none;
+  }
+  .section_description{
+    margin: 0 10px 30px;
+    font-size: em(16px);
+  }
 }
 
 /* Custom, iPhone Retina */
