@@ -32,6 +32,30 @@ $(function(){
         autoPlay: true,
         loop: true,
     });
+    $(".section_reviews .owl-carousel").owlCarousel({
+        items : 1,
+        itemsDesktop : [1199,1],
+        itemsDesktopSmall : [980,1],
+        itemsTablet: [768,1],
+        itemsMobile : [479,1],
+        dots: false,
+        navigation: true,
+        navigationText : ["<i class='fa fa-angle-left' aria-hidden='true'></i>","<i class='fa fa-angle-right' aria-hidden='true'></i>"],
+        slideSpeed : 1000,
+        paginationSpeed : 1000,
+        autoPlay: true,
+        loop: true,
+    });
     /*********END owl-carousel-settings************/
+
+    /***********Portfolio tabs*************/
+    $('.portfolio-type_item').click( function (e) {
+        var type_id = $(this).attr('data-portfolio-type');
+        $('.portfolio-type_item').removeClass('active');
+        $(this).addClass('active');
+        $('.portfolio_item').parent().fadeOut(500);
+        $('.section_portfolio').find('[data-category='+type_id+']').fadeIn(1000);
+    });
+    /***********END Portfolio tabs*************/
 
 });
