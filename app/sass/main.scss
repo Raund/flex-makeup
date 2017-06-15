@@ -39,6 +39,11 @@ ul{
 }
 .clearfix:after {clear: both;}
 
+::-webkit-input-placeholder {color:#e4e4e4;}
+::-moz-placeholder          {color:#e4e4e4;}/* Firefox 19+ */
+:-moz-placeholder           {color:#e4e4e4;}/* Firefox 18- */
+:-ms-input-placeholder      {color:#e4e4e4;}
+
 body{
   width: 100%;
   margin: 0 auto;
@@ -727,6 +732,9 @@ body{
 }
 /*-------------------END Footer----------------------*/
 /*-------------------Contact page----------------------*/
+.page-content{
+  padding: 20px 0 50px;
+}
 .btn-back{
   display: inline-block;
   float: right;
@@ -750,6 +758,52 @@ body{
   height: 5px;
   background: url("../img/dotted.png") center repeat-x;
   z-index: 0;
+}
+.contact-map{
+  height: 480px;
+  margin-bottom: 30px;
+  padding-right: 40px;
+}
+.address{
+  font-family: "OpenSansSemiBold", sans-serif;
+  &-block{
+    margin-bottom: 35px;
+  }
+}
+.callback{
+  &-name {
+    padding-left: 55px;
+    margin-bottom: 20px;
+    background: url('../img/letter.png') left center no-repeat;
+    font-family: "OpenSansLight", sans-serif;
+    font-size: 27px;
+    line-height: 40px;
+  }
+  input,textarea{
+    width: 100%;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    border: 1px solid #e4e4e4;
+    color: #e4e4e4;
+  }
+  input{
+    height: 40px;
+  }
+  textarea{
+    width: 100% !important;
+    padding-top: 10px;
+  }
+}
+.btn_send{
+  float: right;
+  width: 150px;
+  height: 40px;
+  border: none;
+  background-color: #ee515f;
+  color: #fff;
+  font-family: "OpenSansRegular", sans-serif;
+  font-size: 15px;
+  text-transform: uppercase;
 }
 /*-------------------END Contact page----------------------*/
 /*-------------------Owl-carousel----------------------*/

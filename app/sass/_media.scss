@@ -102,6 +102,27 @@
   .section_reviews .owl-next{
     right: 70%;
   }
+  .contact-map{
+    padding-right: 0;
+  }
+  .address{
+    &-block{
+      text-align: center;
+    }
+  }
+  .callback {
+    &-name {
+      display: table;
+      margin: 0 auto;
+      margin-bottom: 20px;
+      background: url('../img/letter.png') left center no-repeat;
+    }
+  }
+  .btn_send{
+    float: none;
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 /* Small Devices, Tablets */
@@ -214,6 +235,13 @@
   .all-items_wrap {
     margin-bottom: 0;
     margin-top: 0;
+  }
+  .section_title__contact-page{
+    display: table;
+    margin: 0 auto;
+  }
+  .btn-back,.section-title_bg{
+    display: none;
   }
 }
 
@@ -346,6 +374,11 @@ animation: none !important
         font-size: 24px;
       }
     }
+  }
+  .section_title__contact-page{
+    background-image: url("../img/geo.png");
+    padding-left: 70px;
+    line-height: 55px;
   }
 }
 
