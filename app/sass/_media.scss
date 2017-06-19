@@ -243,6 +243,13 @@
   .btn-back,.section-title_bg{
     display: none;
   }
+  .portfolio-type{
+    &_item{
+      display: block;
+      margin-left: 0;
+    }
+  }
+
 }
 
 /*

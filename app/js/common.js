@@ -50,11 +50,27 @@ $(function(){
 
     /***********Portfolio tabs*************/
     $('.portfolio-type_item').click( function (e) {
-        var type_id = $(this).attr('data-portfolio-type');
         $('.portfolio-type_item').removeClass('active');
         $(this).addClass('active');
-        $('.portfolio_item').parent().fadeOut(500);
-        $('.section_portfolio').find('[data-category='+type_id+']').fadeIn(1000);
+        var type_id = $(this).attr('data-portfolio-type');
+        if(type_id == 'all'){
+            $('.container').find('[data-category]').fadeIn(1000);
+        } else {
+            $('.portfolio_item').parent().fadeOut(500);
+            $('.container').find('[data-category='+type_id+']').fadeIn(1000);
+        }
+    });
+    /***********END Portfolio tabs*************/
+    /***********Services tabs*************/
+    $('.service-item').fadeOut(0);
+    $('.services_item').click( function (e) {
+        var type_id = $(this).attr('data-service-id');
+        $('.service-item').slideUp(600);
+        $('.page-header').find('[data-service='+type_id+']').slideDown(600);
+        $('html, body').animate({
+            scrollTop: ($('.page-wrap').offset().top - 60)
+        }, 600);
+        e.preventDefault();
     });
     /***********END Portfolio tabs*************/
 
