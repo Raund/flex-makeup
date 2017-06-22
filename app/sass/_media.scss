@@ -249,7 +249,22 @@
       margin-left: 0;
     }
   }
-
+  .section_title__top-news-item{
+    padding: 10px 0;
+    line-height: 45px;
+  }
+  .top-news_wrap .news-date{
+    margin-top: 0;
+  }
+  .top-news_img{
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
+  .section_title__news-page{
+    display: table;
+    text-align: center;
+  }
 }
 
 /*

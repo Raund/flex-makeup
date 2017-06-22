@@ -737,6 +737,7 @@ body {
 /*-------------------END Footer----------------------*/
 /*-------------------Contact page----------------------*/
 .page-header {
+  position: relative;
   margin-top: 50px; }
 
 .page-content {
@@ -813,7 +814,6 @@ body {
 
 /*-------------------END Contact page----------------------*/
 /*-------------------Services page----------------------*/
-/*-------------------END Services page----------------------*/
 .section_title__services-page {
   position: relative;
   display: inline-block;
@@ -858,6 +858,68 @@ body {
   .service-item_description p {
     margin-bottom: 20px; }
 
+/*-------------------END Services page----------------------*/
+/*-------------------News page----------------------*/
+.section_title__news-page {
+  position: relative;
+  display: inline-block;
+  text-align: left;
+  background: #fff url("../img/news.png") left center no-repeat;
+  z-index: 1; }
+
+.services_item:hover .news_item__title.page-news_item__title {
+  color: inherit; }
+
+.section_title__top-news-item {
+  position: relative;
+  display: inline-block;
+  padding-right: 85px;
+  text-align: left;
+  z-index: 1; }
+
+.top-news_wrap {
+  margin-top: -20px;
+  margin-bottom: 20px; }
+  .top-news_wrap .news-date {
+    margin-top: 15px;
+    margin-right: 20px; }
+    .top-news_wrap .news-date_day {
+      font-size: 26px;
+      text-align: center; }
+    .top-news_wrap .news-date_month {
+      font-size: 19px;
+      text-align: center; }
+
+.section-title_bg__news {
+  top: 15px;
+  width: -webkit-calc(100% - 65px);
+  width: calc(100% - 65px);
+  margin-bottom: 40px;
+  margin-left: 65px; }
+
+.btn-back_news {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  z-index: 5; }
+
+.top-news_img {
+  float: left;
+  width: 400px;
+  height: auto;
+  margin-right: 50px;
+  margin-bottom: 40px; }
+
+.top-news_description p {
+  margin-bottom: 20px; }
+
+.more {
+  float: right;
+  font-weight: bold; }
+  .more:hover {
+    color: #ee515f; }
+
+/*-------------------END News page----------------------*/
 /*-------------------Owl-carousel----------------------*/
 .owl-carousel .owl-wrapper-outer {
   z-index: 1; }
@@ -1091,7 +1153,19 @@ body {
     display: none; }
   .portfolio-type_item {
     display: block;
-    margin-left: 0; } }
+    margin-left: 0; }
+  .section_title__top-news-item {
+    padding: 10px 0;
+    line-height: 45px; }
+  .top-news_wrap .news-date {
+    margin-top: 0; }
+  .top-news_img {
+    float: none;
+    width: 100%;
+    margin-right: 0; }
+  .section_title__news-page {
+    display: table;
+    text-align: center; } }
 
 /*
 !*Disable Animation on Mobile Devices*!
